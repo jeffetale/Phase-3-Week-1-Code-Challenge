@@ -1,15 +1,22 @@
 # Code Challenge Solutions
 
-This repository contains Python modules that solve various coding challenges. Each module is designed to tackle a specific challenge. Below are the descriptions of each module along with instructions on how to use them.
+This repository contains Python modules that provide solutions to various coding challenges. Each module is designed to address a specific challenge. Below are detailed descriptions of each module, along with instructions on how to use them effectively.
 
 ## Requirements
 
-* python3.10 and above
-* Visual Studio Code or any othe IDE
+* **Python 3.10 and above**
+* **Visual Studio Code or any other IDE**
 
-To use, clone this repository to your machine and open the directory.
-To run a module type [python module_name] or [python3 module_name] where "module name" is the name of the module you want to run.
-Or you can simply press the run button in your IDE to run the modules.
+## Getting Started
+
+1. Clone this repository to your local machine.
+2. Open the repository directory in your preferred IDE.
+3. To run a module, open a terminal within your IDE and type:
+   python module_name
+         or
+   python3 module_name
+where `module_name` is the name of the module you want to run.
+4. Alternatively, you can simply press the "Run" button in your IDE to execute the modules.
 
 ## Challenge 1: Converting 12-hour Time to 24-hour Time
 
