@@ -8,16 +8,25 @@ Your task is to return a four-digit string that encodes that time in 24-hour tim
 """
 
 
-def to_24_hour():
+def to_24_hour(hour, minute, period):
+    try:
+        hour = int(hour)
+        minute = int(minute)
+        period = period.lower()
+    except ValueError:
+        return "Error:  hour and minute must be integers, period must be a string"
+                 
+    '''
     hour = int(input("Enter the hour (1-12): "))
     minute = int(input("Enter the minute (0-59): "))
     period = input("Enter the period (am/pm): ").lower()
     if not isinstance(hour, int):
-        return "Error: hour must be an integer"
+        raise ValueError("Error: hour must be an integer")
     if not isinstance(minute, int):
         return "Error: minute must be an integer"
     if not isinstance(period, str):
         return "Error: period must be a string"
+                '''
     if not (1 <= hour <= 12):
         return "Error: hour must be between 1 and 12"
     if not (0 <= minute <= 59):
@@ -31,5 +40,15 @@ def to_24_hour():
 
     return f"{hour:02d}{minute:02d}"
 
-result = to_24_hour()
-print(f"The 24-hour time is: {result}")
+
+while True:
+        hour = input("Enter the hour (1-12): ")
+        minute = input("Enter the minute (0-59): ")
+        period = input("Enter the period (am/pm): ")
+        result = to_24_hour(hour, minute, period)
+        if result.startswith("Error"):
+             print(result)
+        else:
+             print(f"The 24-hour time is: {result}")
+             break
+        
