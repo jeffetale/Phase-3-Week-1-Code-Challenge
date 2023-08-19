@@ -1,5 +1,9 @@
 def solve():
-    str = input("Enter a word or sentence: ")
+    while True:
+        str = input("Enter a word or sentence: ")
+        if not any(char.isdigit() for char in str) and all(char.isalpha() or char.isspace() for char in str)  and not all(char in "aeiou" for char in str.lower()) and str and not str.isspace():
+            break
+        print("Error: Input should only contain letters, not only vowels, and not be empty or contain only spaces. Please try again!")
     vowels = set("aeiou")
     str = ''.join([char if char not in vowels else ' ' for char in str]).lower()
     substrings = str.split()
