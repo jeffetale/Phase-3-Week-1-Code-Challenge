@@ -9,14 +9,17 @@ Your task is to return a four-digit string that encodes that time in 24-hour tim
 
 
 def to_24_hour(hour, minute, period):
+    
+    """
     try:
         hour = int(hour)
         minute = int(minute)
         period = period.lower()
     except ValueError:
         return "Error:  hour and minute must be integers, period must be a string"
-                 
-    '''
+    """
+
+    """
     hour = int(input("Enter the hour (1-12): "))
     minute = int(input("Enter the minute (0-59): "))
     period = input("Enter the period (am/pm): ").lower()
@@ -26,13 +29,14 @@ def to_24_hour(hour, minute, period):
         return "Error: minute must be an integer"
     if not isinstance(period, str):
         return "Error: period must be a string"
-                '''
     if not (1 <= hour <= 12):
         return "Error: hour must be between 1 and 12"
     if not (0 <= minute <= 59):
         return "Error: minute must be between 0 and 59"
     if period not in ["am", "pm"]:
         return "Error: period must be either 'am' or 'pm'"
+    """
+
     if period == "pm" and hour != 12:
         hour += 12
     elif period == "am" and hour == 12:
@@ -42,13 +46,39 @@ def to_24_hour(hour, minute, period):
 
 
 while True:
-        hour = input("Enter the hour (1-12): ")
-        minute = input("Enter the minute (0-59): ")
-        period = input("Enter the period (am/pm): ")
-        result = to_24_hour(hour, minute, period)
-        if result.startswith("Error"):
-             print(result)
+    while True:
+        try:
+            hour = int(input("Enter the hour (1-12): "))
+            if not (1 <= hour <= 12):
+                print("Error: hour must be between 1 and 12")
+                continue
+            break
+        except ValueError:
+            print("Error: hour must be an integer")
+
+    while True:
+        try:
+            minute = int(input("Enter the minute (0-59): "))
+            if not (0 <= minute <= 59):
+                print("Error: minute must be between 0 and 59")
+                continue
+            break
+        except ValueError:
+            print("Error: minute must be an integer")
+
+    while True:
+        period = input("Enter the period (am/pm): ").lower()
+        if period in ["am", "pm"]:
+            break
         else:
-             print(f"The 24-hour time is: {result}")
-             break
-        
+            print("Error: period must be either 'am' or 'pm'")
+
+    result = to_24_hour(hour, minute, period)
+    
+    '''
+    if result.startswith("Error"):
+        print(result)
+    else:
+    '''
+    print(f"The 24-hour time is: {result}")
+    break
