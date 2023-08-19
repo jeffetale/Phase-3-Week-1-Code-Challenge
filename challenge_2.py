@@ -8,9 +8,16 @@ Your job is to write a function, which takes three integers a, b, and c as argum
 def two_positive(a: int, b: int, c: int):
     return sum(x > 0 for x in (a, b, c)) == 2
 
-a = int(input('Enter the first integer: '))
-b = int(input('Enter the second integer: '))
-c = int(input('Enter the third integer: '))
+def get_integer(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print('Error: Please enter a valid integer value.')
+
+a = get_integer('Enter the first integer: ')
+b = get_integer('Enter the second integer: ')
+c = get_integer('Enter the third integer: ')
 
 result = two_positive(a, b, c)
-print (result)
+print (f"Result: {result}")
