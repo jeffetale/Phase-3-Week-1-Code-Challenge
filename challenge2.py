@@ -8,4 +8,9 @@ Your job is to write a function, which takes three integers a, b, and c as argum
 def two_positive(a: int, b: int, c: int):
     return sum(x > 0 for x in (a, b, c)) == 2
 
-print(two_positive(3,4,0))
+a = int(input('Enter the first integer: '))
+b = int(input('Enter the second integer: '))
+c = int(input('Enter the third integer: '))
+
+result = two_positive(a, b, c)
+print (result)
