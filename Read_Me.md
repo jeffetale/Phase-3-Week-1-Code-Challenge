@@ -12,9 +12,9 @@ This repository contains Python modules that provide solutions to various coding
 1. Clone this repository to your local machine.
 2. Open the repository directory in your preferred IDE.
 3. To run a module, open a terminal within your IDE and type:
-   python module_name
+   **python module_name**
          or
-   python3 module_name
+   **python3 module_name**
 where `module_name` is the name of the module you want to run.
 4. Alternatively, you can simply press the "Run" button in your IDE to execute the modules.
 
