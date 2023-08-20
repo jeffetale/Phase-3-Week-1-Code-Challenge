@@ -7,7 +7,7 @@ Your job is to write a function, which takes three integers a, b, and c as argum
 
 def two_positive(a: int, b: int, c: int):
     return sum(x > 0 for x in (a, b, c)) == 2
-
+print("Check if two numbers are positive.")
 def get_integer(prompt):
     while True:
         try:

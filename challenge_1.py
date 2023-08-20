@@ -9,7 +9,6 @@ Your task is to return a four-digit string that encodes that time in 24-hour tim
 
 
 def to_24_hour(hour, minute, period):
-    
     """
     try:
         hour = int(hour)
@@ -41,11 +40,12 @@ def to_24_hour(hour, minute, period):
         hour += 12
     elif period == "am" and hour == 12:
         hour = 0
-
+    
     return f"{hour:02d}{minute:02d}"
 
 
 while True:
+    print("Converting 12-hour time to 24-hour time")
     while True:
         try:
             hour = int(input("Enter the hour (1-12): "))
@@ -74,11 +74,11 @@ while True:
             print("Error: period must be either 'am' or 'pm'")
 
     result = to_24_hour(hour, minute, period)
-    
-    '''
+
+    """
     if result.startswith("Error"):
         print(result)
     else:
-    '''
+    """
     print(f"The 24-hour time is: {result}")
     break
